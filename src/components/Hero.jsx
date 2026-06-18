@@ -70,22 +70,30 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="hero-bg-gradient"></div>
 
-      <div className="hero-content section flex-col items-center justify-center animate-fade-in-up">
-        
-        <div className="text-center" style={{ maxWidth: '800px', width: '100%' }}>
-          <h2 className="section-subtitle">
-            <span className="dot"></span> {heroContent.subtitle}
+        <div className="hero-content">
+          <div className="hero-badge">
+            <span className="live-dot"></span>
+            Available for new opportunities
+          </div>
+          
+          <h2 className="hero-subtitle">
+            {heroContent.subtitle}
           </h2>
           <h1 className="hero-title">
-            {heroContent.greeting} <br /> <span className="highlight-text">{heroContent.name}</span>
+            {heroContent.greeting} <br /> <span className="text-gradient">{heroContent.name}</span>
           </h1>
-          <h2 className="hero-role">
-            I am a <span className="typewriter">{text}</span><span className="cursor">|</span>
-          </h2>
-          <p className="hero-description">
+          
+          <div className="typewriter-container">
+            <h2 className="hero-subtitle">
+              I am a <span className="typewriter-text">{text}</span><span className="cursor">|</span>
+            </h2>
+          </div>
+
+          <p className="hero-desc">
             {heroContent.description}
           </p>
-          <div className="flex justify-center gap-4 mt-8" style={{ flexWrap: 'wrap' }}>
+
+          <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               View My Work
             </a>

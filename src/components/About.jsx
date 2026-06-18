@@ -21,7 +21,15 @@ const About = () => {
         const docRef = doc(db, "content", "about");
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          setAboutData(docSnap.data());
+          const data = docSnap.data();
+          setAboutData(prev => ({
+            description: data.description || prev.description,
+            image: data.image || prev.image,
+            resumeLink: data.resumeLink || prev.resumeLink,
+            email: data.email || prev.email,
+            phone: data.phone || prev.phone,
+            location: data.location || prev.location
+          }));
         }
       } catch (err) {
         console.error("Using local fallback data because Firebase failed:", err);
