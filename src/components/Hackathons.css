@@ -1,0 +1,122 @@
+.bg-slate {
+  background-color: var(--bg-surface-elevated);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hackathons-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.hackathons-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 2px;
+  background: var(--border-strong);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: white;
+  border: 2px solid var(--border-strong);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  border-color: var(--primary-light);
+}
+
+.hackathon-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-surface-elevated);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hackathon-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.hackathon-domain {
+  color: var(--accent-orange);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hackathon-desc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hackathon-tech {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hackathon-tech span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .hackathons-timeline::before {
+    left: 1rem;
+  }
+  .timeline-icon {
+    left: -0.25rem;
+  }
+  .timeline-item {
+    padding-left: 3.5rem;
+  }
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}
