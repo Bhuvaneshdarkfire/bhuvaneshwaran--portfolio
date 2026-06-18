@@ -101,7 +101,7 @@ const Hero = () => {
               Get in Touch
             </a>
           </div>
-        </div>
+        
 
         <div className="hero-stats">
           <div className="stat-card glass">
